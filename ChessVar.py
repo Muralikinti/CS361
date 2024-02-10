@@ -60,6 +60,10 @@ class ChessVar:
         if self._game_state != 'UNFINISHED':
             return False
 
+        if not from_square or not to_square:
+            print("Both starting square and ending square must be provided.")
+            return False
+
         if to_square.lower() == 'u':
             print("Move undone.")
             return False
